@@ -34,14 +34,14 @@ class BankAccount{
     get Balance()
     {
         return this.#balance
-    }       
-    set Balance(value)
-    {
-        this.#balance=value
-    }   
+    }
 
 
     Deposit(amount){
+        if (amount <= 0) {
+            console.log("Invalid amount");
+            return;
+        }
         this.#balance+=amount;
         console.log("Amount Deposited");
         this.getBalance();
@@ -49,6 +49,11 @@ class BankAccount{
 
 
     Withdraw(amount){
+        if (amount <= 0) {
+            console.log("Invalid withdrawal amount");
+            return;
+        }
+
         if(amount>this.#balance)
         {
             console.log("Insufficient Balance");
