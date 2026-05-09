@@ -57,7 +57,7 @@ class Student {
     }
 }
 
-const student1 = new Student(1,"Sahil",35);
+const student1 = new Student(1,"Sahil",80);
 student1.DisplayDetails()
 student1.checkResult()
 
